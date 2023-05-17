@@ -1,0 +1,350 @@
+@import "Ginkgo";
+@import "bootstrap/bootstrap";
+
+
+* {
+  &, &:after, &:before {
+    vertical-align: middle;
+    @include box-sizing(border-box);
+    @include font-smoothing(subpixel-antialiased);
+  }
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  position: relative;
+
+  display: inline-block;
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  
+  font-family: 'Noto Sans TC', 'Roboto', "Helvetica Neue", HelveticaNeue, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+
+  text-size-adjust: none;
+  -webkit-text-size-adjust:none;
+
+  background-color: #F6F5F3;
+}
+
+a {
+  text-decoration: none !important;
+
+  &:after, &:before {
+    vertical-align: top !important;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  outline: 0;
+  border-width: 0;
+}
+
+b {
+  vertical-align: top !important;
+}
+
+
+header {
+  display: inline-block;
+  width: 100%;
+  background-color: #FBFBFB;
+  padding-bottom: 20px;
+
+  .circle1 {
+    border-radius: 0 0 350px 350px;
+    width: 350px;
+    height: 175px;
+    display: inline-block;
+    background: #F6F5F3;
+
+    @include range-width(0, 450px) {
+      border-radius: 0 0 180px 180px;
+      width: 180px;
+      height: 90px;
+    }
+  }
+}
+
+.circle2 {
+  border-radius: 0 0 250px 250px;
+  width: 250px;
+  height: 125px;
+  display: inline-block;
+  background: #F6F5F3;
+  position: absolute;
+  top: -15px;
+}
+
+footer {
+  font-size: 1rem;
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Roboto'; 
+}
+
+.mob-close {
+  display: inline-block;
+  @include range-width(0, 450px) {
+    display: none;
+  }
+}
+
+.mob-open {
+  display: none !important;
+  @include range-width(0, 450px) {
+    display: inline-block !important;
+  }
+}
+
+.h-logo {
+  display: inline-block;
+  width: 100%;
+  max-width: 300px;
+}
+
+h1 {
+  padding: 10px 0;
+  letter-spacing: 10px;
+
+  @include range-width(0, 450px) {
+    letter-spacing: 0;
+  }
+}
+
+.BigtitleBoxs {
+  display: inline-block;
+  width: 50%;
+  top: 5%;
+  right: 0;
+
+  @include range-width(0, 450px) {
+    width: 100%;
+    top: 0;
+  }
+}
+
+.allBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box50 {
+  display: inline-block;
+  width: 50%;
+
+  @include range-width(0, 450px) {
+    width: 100%;
+  }
+}
+
+.proBoxs {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  @include range-width(0, 450px) {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.proBoxs2 {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 600px;
+
+  @include range-width(0, 450px) {
+    padding: 0 10px;
+    width: 100%;
+    right: 0;
+  }
+}
+
+.w600 {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+}
+
+.pinkBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #F6B4AD;
+  padding: 20px;
+}
+
+.brownBoxs {
+  display: inline-block;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #B98A70;
+  padding: 20px;
+}
+
+
+
+
+// text
+.f50 {
+  font-size: 3.8rem;
+  font-weight: 600;
+}
+.f40 {
+  font-size: 3.1rem;
+  font-weight: 600;
+
+  @include range-width(0, 450px) {
+    font-size: 2.3rem;
+  }
+}
+.f38 {
+  font-size: 2.8rem;
+  font-weight: 400;
+
+  @include range-width(0, 450px) {
+    font-size: 2.3rem;
+  }
+}
+.f30 {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+.f30-unset {
+  font-size: 2.3rem;
+}
+.f28 {
+  font-size: 2.5rem;
+}
+.f24 {
+  font-size: 1.8rem;
+  @include range-width(0, 450px) {
+    font-size: 1.38rem;
+  }
+}
+.f20 {
+  font-size: 1.53rem;
+  font-weight: 400;
+}
+.f20-unset {
+  font-size: 1.53rem;
+}
+.f18 {
+  font-size: 1.38rem;
+}
+.f16 {
+  font-size: 1.23rem;
+}
+.f13 {
+  font-size: 1rem;
+}
+
+
+
+
+// link
+.btn01 {
+  display: inline-block;
+  width: 100%;
+  max-width: 240px;
+  background-color: #000;
+  color: white;
+  font-size: 1.8rem;
+  padding: 10px 0;
+
+  &:hover {
+    color: white;
+    background-color: #202124;
+  }
+
+  @include range-width(0, 450px) {
+    max-width: 130px;
+    font-size: 1.38rem;
+  }
+}
+
+.btn02 {
+  display: inline-block;
+  padding: 5px 20px;
+  background-color: #000;
+  color: white;
+  font-size: 1.23rem;
+  float: right;
+
+  @include range-width(0, 450px) {
+    width: 100%;
+    float: unset;
+  }
+}
+
+.table-link {
+  color: #678AFF;
+  vertical-align: top !important;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+
+
+// space
+.py90 {
+  padding: 90px 0;
+}
+
+
+
+.bg-main-color {
+  background-color: #F6F5F3;
+}
+
+.h125 {
+  height: 125px;
+}
+
+
+
+// boo
+.form-check-label {
+  font-size: 1.23rem;
+  vertical-align: top !important;
+}
+
+.form-check-input {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.form-control {
+  font-size: 1.23rem !important;
+  padding: 1rem !important;
+  color: #000 !important;
+
+  &::placeholder {
+    color: #000 !important;
+  }
+}
+
+.form-select {
+  font-size: 1.23rem !important;
+  padding: 1.23rem !important;
+}
+
