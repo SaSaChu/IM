@@ -94,9 +94,9 @@ footer {
 }
 
 .mob-close {
-  display: inline-block;
+  display: inline-block !important;
   @include range-width(0, 450px) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -106,6 +106,14 @@ footer {
     display: inline-block !important;
   }
 }
+
+.pad-open {
+  display: none !important;
+  @include range-width(0, 770px) {
+    display: inline-block !important;
+  }
+}
+
 
 .h-logo {
   display: inline-block;
@@ -127,6 +135,14 @@ h1 {
   width: 50%;
   top: 5%;
   right: 0;
+
+  @include range-width(770px, 1025px) {
+    top: 2%;
+  }
+
+  @include range-width(450px, 770px) {
+    top: 3%;
+  }
 
   @include range-width(0, 450px) {
     width: 100%;
@@ -159,7 +175,19 @@ h1 {
 
   @include range-width(0, 450px) {
     width: 100%;
+    height: auto;
     padding: 0 10px;
+  }
+}
+
+.proBoxs-m {
+  display: none !important;
+
+  @include range-width(0, 450px) {
+    display: inline-block !important;
+    padding: 0 10px;
+    width: 100%;
+    bottom: 20px;
   }
 }
 
@@ -170,10 +198,27 @@ h1 {
   top: 0;
   right: 600px;
 
+  @include range-width(450px, 1025px) {
+    right: auto;
+  }
+
   @include range-width(0, 450px) {
     padding: 0 10px;
     width: 100%;
+    height: auto;
     right: 0;
+  }
+}
+
+.proBoxs2-m {
+  display: none !important;
+
+  @include range-width(0, 450px) {
+    display: inline-block !important;
+    padding: 0 10px;
+    width: 100%;
+    height: auto;
+    bottom: 0;
   }
 }
 
@@ -181,6 +226,10 @@ h1 {
   display: inline-block;
   width: 100%;
   max-width: 600px;
+
+  @include range-width(0, 770px) {
+    max-width: unset;
+  }
 }
 
 .pinkBoxs {
@@ -189,6 +238,11 @@ h1 {
   max-width: 600px;
   border: 1px solid #F6B4AD;
   padding: 20px;
+
+  @include range-width(0, 770px) {
+    padding: 15px;
+    max-width: unset;
+  }
 }
 
 .brownBoxs {
@@ -197,6 +251,11 @@ h1 {
   max-width: 600px;
   border: 1px solid #B98A70;
   padding: 20px;
+
+  @include range-width(0, 770px) {
+    padding: 15px;
+    max-width: unset;
+  }
 }
 
 
@@ -206,52 +265,79 @@ h1 {
 .f50 {
   font-size: 3.8rem;
   font-weight: 600;
+
+  @include range-width(0, 770px) {
+    font-size: 2.3rem;
+  }
 }
+
 .f40 {
   font-size: 3.1rem;
   font-weight: 600;
 
-  @include range-width(0, 450px) {
+  @include range-width(0, 770px) {
     font-size: 2.3rem;
   }
 }
+
 .f38 {
   font-size: 2.8rem;
   font-weight: 400;
 
-  @include range-width(0, 450px) {
+  @include range-width(0, 770px) {
     font-size: 2.3rem;
   }
 }
+
 .f30 {
   font-size: 2.3rem;
   font-weight: 400;
+
+  @include range-width(0, 770px) {
+    font-size: 1.53rem;
+  }
 }
+
 .f30-unset {
   font-size: 2.3rem;
+
+  @include range-width(0, 770px) {
+    font-size: 1.53rem;
+  }
 }
+
 .f28 {
   font-size: 2.5rem;
+
+  @include range-width(0, 770px) {
+    font-size: 1.23rem;
+  }
 }
+
 .f24 {
   font-size: 1.8rem;
-  @include range-width(0, 450px) {
+  @include range-width(0, 770px) {
     font-size: 1.38rem;
   }
 }
+
 .f20 {
   font-size: 1.53rem;
   font-weight: 400;
 }
+
 .f20-unset {
   font-size: 1.53rem;
 }
+
 .f18 {
   font-size: 1.38rem;
 }
+
 .f16 {
   font-size: 1.23rem;
 }
+
 .f13 {
   font-size: 1rem;
 }
@@ -274,7 +360,7 @@ h1 {
     background-color: #202124;
   }
 
-  @include range-width(0, 450px) {
+  @include range-width(0, 770px) {
     max-width: 130px;
     font-size: 1.38rem;
   }
@@ -308,6 +394,22 @@ h1 {
 // space
 .py90 {
   padding: 90px 0;
+
+  @include range-width(0, 450px) {
+    padding: 45px 0;
+  }
+}
+
+.m-pt75 {
+  @include range-width(0, 450px) {
+    padding-top: 75px;
+  }
+}
+
+.m-pt55 {
+  @include range-width(0, 450px) {
+    padding-top: 55px;
+  }
 }
 
 
